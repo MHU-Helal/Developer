@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO Meta -->
+  <title>Expert PHP Developer — Scalable Backend, APIs & Web Apps</title>
+  <meta name="description" content="Hire an expert PHP developer for scalable backend systems, REST APIs, Laravel integration, performance-tuned MySQL and secure web apps. Fast delivery, clean code, and measurable results." />
+  <link rel="canonical" href="https://example.com/services/php-developer" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Expert PHP Developer — Scalable Backend & APIs" />
+  <meta property="og:description" content="Hire an expert PHP developer for scalable backend systems, REST APIs, Laravel integration, performance-tuned MySQL and secure web apps." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/services/php-developer" />
+  <meta property="og:image" content="/assets/php-dev-og.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Structured Data (JSON-LD) for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "John Doe",
+    "jobTitle": "PHP Developer",
+    "url": "https://example.com/services/php-developer",
+    "sameAs": ["https://github.com/johndoe","https://www.linkedin.com/in/johndoe"],
+    "image": "https://example.com/assets/php-dev-og.jpg",
+    "description": "Senior PHP developer specializing in backend systems, API design, Laravel & performance optimization."
+  }
+  </script>
+
+  <!-- Tailwind Play CDN for quick styling (production: use built build) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Preload critical font/icon (example) -->
+  <link rel="preload" href="https://fonts.gstatic.com/" as="font" crossorigin>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-..." crossorigin="anonymous"></script>
+
+  <style>
+    /* Small custom CSS where Tailwind isn't convenient */
+    .hero-gradient { background: linear-gradient(135deg,#0f172a 0%, #0ea5a4 100%); }
+    .card-glow { box-shadow: 0 10px 30px rgba(14,165,164,0.08); }
+    .testimonial-dot { width:10px; height:10px; border-radius:9999px; display:inline-block; margin:0 6px; cursor:pointer; }
+    /* Accessibility: reduce motion */
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; animation: none !important; }
+    }
+  </style>
+</head>
+<body class="antialiased text-gray-800 bg-gray-50">
+
+  <!-- Header / Hero -->
+  <header class="hero-gradient text-white py-16 sm:py-24">
+    <div class="container mx-auto px-6 lg:flex lg:items-center lg:justify-between">
+      <div class="lg:w-7/12">
+        <p class="uppercase tracking-wide text-sm opacity-90">Professional Services • PHP Development</p>
+        <h1 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">Expert PHP Developer for Scalable, Secure & High-Performance Web Applications</h1>
+        <p class="mt-4 text-lg sm:text-xl opacity-95 max-w-2xl">Delivering maintainable PHP backends, RESTful APIs, microservices, Laravel apps and integrations—optimized for speed, security and SEO.</p>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#contact" class="inline-block bg-white text-teal-700 font-semibold px-5 py-3 rounded-lg shadow hover:shadow-lg">Get a Quote — Email</a>
+          <button id="open-schedule" class="inline-block bg-transparent border border-white px-5 py-3 rounded-lg hover:bg-white/10">Schedule Meeting</button>
+        </div>
+
+        <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm opacity-95">
+          <li>✅ Custom APIs & integrations</li>
+          <li>✅ Laravel, Symfony & custom frameworks</li>
+          <li>✅ Performance tuning & caching</li>
+          <li>✅ Secure auth, roles & REST/GraphQL</li>
+        </ul>
+      </div>
+
+      <div class="mt-10 lg:mt-0 lg:w-5/12">
+        <div class="bg-white rounded-2xl p-6 md:p-8 shadow-xl card-glow text-gray-800">
+          <h3 class="text-xl font-semibold">Quick Contact</h3>
+          <p class="text-sm mt-1 mb-4 text-gray-600">Send your project summary and I’ll reply within 24 hours.</p>
+          <form id="lead-form" class="space-y-3">
+            <div>
+              <label class="sr-only">Name</label>
+              <input name="name" required class="w-full rounded-md border-gray-200 shadow-sm px-3 py-2" placeholder="Your full name" />
+            </div>
+            <div>
+              <label class="sr-only">Email</label>
+              <input name="email" type="email" required class="w-full rounded-md border-gray-200 shadow-sm px-3 py-2" placeholder="your@email.com" />
+            </div>
+            <div>
+              <label class="sr-only">Message</label>
+              <textarea name="message" rows="3" class="w-full rounded-md border-gray-200 shadow-sm px-3 py-2" placeholder="Brief summary of your project (goals, timeline, budget)"></textarea>
+            </div>
+            <div class="flex items-center gap-3">
+              <button type="submit" class="inline-block bg-teal-600 text-white px-4 py-2 rounded-md font-medium">Send Message</button>
+              <button id="schedule-small" type="button" class="inline-block bg-gray-100 text-gray-800 px-4 py-2 rounded-md">Schedule</button>
+            </div>
+            <p id="lead-status" class="text-sm mt-2 text-gray-600 hidden"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-6 -mt-10">
+
+    <!-- Trust / Stats -->
+    <section class="bg-white rounded-2xl shadow p-6 md:p-8 -mt-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex gap-6">
+          <div class="text-center">
+            <p class="text-2xl font-bold">10+</p>
+            <p class="text-sm text-gray-500">Years experience</p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl font-bold">150+</p>
+            <p class="text-sm text-gray-500">Projects delivered</p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl font-bold">99%</p>
+            <p class="text-sm text-gray-500">Client satisfaction</p>
+          </div>
+        </div>
+        <div class="text-sm text-gray-600">Available for full-time, part-time or fixed-price contracts. Remote-friendly across timezones.</div>
+      </div>
+    </section>
+
+    <!-- Services & SEO-focused content -->
+    <section class="mt-8 grid lg:grid-cols-3 gap-6">
+      <article class="col-span-2 bg-white rounded-xl p-6 shadow">
+        <h2 class="text-2xl font-bold">PHP Development Services</h2>
+        <p class="mt-3 text-gray-700">Specialized backend engineering—architecting RESTful APIs, microservices, payment integrations, and admin dashboards. I follow clean architecture, SOLID principles and automated testing to make your codebase maintainable and scalable for growth.</p>
+
+        <div class="mt-6 grid sm:grid-cols-2 gap-4">
+          <div class="p-4 border rounded">
+            <h3 class="font-semibold">API & Integrations</h3>
+            <p class="text-sm text-gray-600 mt-1">Designing REST & GraphQL APIs, webhooks, OAuth2, payment gateways.</p>
+          </div>
+          <div class="p-4 border rounded">
+            <h3 class="font-semibold">Laravel Applications</h3>
+            <p class="text-sm text-gray-600 mt-1">From MVPs to full-featured Laravel apps with queues, events and Horizon monitoring.</p>
+          </div>
+          <div class="p-4 border rounded">
+            <h3 class="font-semibold">Performance & Scaling</h3>
+            <p class="text-sm text-gray-600 mt-1">Profiling, caching (Redis), opcode caching, optimized queries & indexing.</p>
+          </div>
+          <div class="p-4 border rounded">
+            <h3 class="font-semibold">Security & Audits</h3>
+            <p class="text-sm text-gray-600 mt-1">Auth, role-based access, OWASP hardening, rate-limiting and input sanitization.</p>
+          </div>
+        </div>
+
+        <h3 class="mt-6 font-semibold">Why choose this PHP developer?</h3>
+        <ul class="mt-2 list-inside list-disc text-gray-600">
+          <li>SEO-friendly server-side rendered content and clean URL structures</li>
+          <li>Fast time-to-first-byte (TTFB) and caching strategies for better page ranks</li>
+          <li>Automated tests and CI/CD to keep your site reliable</li>
+        </ul>
+
+      </article>
+
+      <!-- Sidebar: Past projects quick overview -->
+      <aside class="bg-white rounded-xl p-6 shadow">
+        <h3 class="font-bold">Past Projects</h3>
+        <p class="text-sm text-gray-500 mt-1">Selected backend systems & web apps.</p>
+
+        <div id="projects" class="mt-4 space-y-4">
+          <!-- Projects dynamically inserted by JS for demo -->
+        </div>
+
+        <button id="show-all-projects" class="mt-4 w-full bg-teal-600 text-white py-2 rounded">View full portfolio</button>
+      </aside>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="mt-8">
+      <h2 class="text-2xl font-bold">Client Testimonials</h2>
+      <div class="relative mt-4 bg-white rounded-xl p-6 shadow">
+        <div id="testimonial-area" class="min-h-[120px]">
+          <!-- testimonials filled by JS -->
+        </div>
+
+        <div class="mt-4 text-sm text-center" id="testimonial-dots"></div>
+      </div>
+    </section>
+
+    <!-- FAQ for SEO & structured data opportunity -->
+    <section class="mt-8 bg-white rounded-xl p-6 shadow">
+      <h2 class="text-2xl font-bold">Frequently Asked Questions</h2>
+      <div class="mt-4 space-y-3">
+        <details class="p-3 border rounded"><summary class="font-medium">How long does a typical backend project take?</summary><p class="mt-2 text-sm text-gray-600">Small APIs: 1-2 weeks. Medium apps: 4-8 weeks. Large systems: depends on scope—contact to estimate.</p></details>
+        <details class="p-3 border rounded"><summary class="font-medium">Do you use unit/integration tests?</summary><p class="mt-2 text-sm text-gray-600">Yes — PHPUnit and feature tests for critical flows. I set up CI pipelines for automated testing.</p></details>
+        <details class="p-3 border rounded"><summary class="font-medium">Can you improve performance of an existing app?</summary><p class="mt-2 text-sm text-gray-600">Absolutely — profiling, query optimization, caching and infrastructure tuning are standard deliverables.</p></details>
+      </div>
+    </section>
+
+    <!-- Contact / Email capture & scheduling -->
+    <section id="contact" class="mt-8 bg-gradient-to-r from-white to-teal-50 rounded-xl p-6 shadow">
+      <div class="grid md:grid-cols-2 gap-6 items-start">
+        <div>
+          <h2 class="text-2xl font-bold">Contact & Book a Meeting</h2>
+          <p class="mt-2 text-gray-600">Choose an option — quick email or schedule a 30-minute call to discuss requirements.</p>
+
+          <form id="email-capture" class="mt-4 space-y-3 bg-white p-4 rounded">
+            <div><label class="sr-only">Email</label><input name="email" type="email" class="w-full rounded border-gray-200 px-3 py-2" placeholder="your@email.com" required></div>
+            <div><label class="sr-only">Project</label><input name="project" class="w-full rounded border-gray-200 px-3 py-2" placeholder="Project title (optional)"></div>
+            <div class="flex gap-3"><button type="submit" class="bg-teal-600 text-white px-4 py-2 rounded">Send Email</button><button id="open-scheduler-cta" type="button" class="bg-white border px-4 py-2 rounded">Schedule Call</button></div>
+            <p id="email-status" class="text-sm text-gray-600 hidden"></p>
+          </form>
+        </div>
+
+        <div>
+          <h3 class="font-semibold">Meeting Scheduler</h3>
+          <div id="scheduler" class="mt-4 bg-white p-4 rounded">
+            <label class="block text-sm">Select a date</label>
+            <input id="meet-date" type="date" class="w-full mt-1 rounded border-gray-200 px-3 py-2" />
+            <label class="block text-sm mt-3">Select time (30-min slot)</label>
+            <select id="meet-time" class="w-full mt-1 rounded border-gray-200 px-3 py-2">
+              <option value="09:00">09:00</option>
+              <option value="10:00">10:00</option>
+              <option value="14:00">14:00</option>
+              <option value="16:00">16:00</option>
+            </select>
+            <button id="book-meeting" class="mt-4 w-full bg-teal-600 text-white py-2 rounded">Book Meeting</button>
+            <p id="meeting-status" class="text-sm text-gray-600 mt-2 hidden"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-8 py-8 text-sm text-gray-600 text-center">
+      <div>© <span id="year"></span> John Doe — PHP Developer • <a href="#contact" class="underline">Hire me</a></div>
+    </footer>
+
+  </main>
+
+  <!-- Modal for schedule (simple) -->
+  <div id="schedule-modal" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-xl p-6 w-11/12 max-w-lg">
+      <div class="flex items-center justify-between">
+        <h3 class="text-lg font-bold">Request a Meeting</h3>
+        <button id="close-schedule" class="text-gray-500">✕</button>
+      </div>
+      <p class="text-sm text-gray-600 mt-2">Choose a date & time and leave contact details. (This demo stores locally — replace with calendar API for production.)</p>
+      <form id="modal-schedule-form" class="mt-4 space-y-3">
+        <input name="name" required placeholder="Full name" class="w-full rounded border-gray-200 px-3 py-2" />
+        <input name="email" type="email" required placeholder="Email" class="w-full rounded border-gray-200 px-3 py-2" />
+        <div class="flex gap-2">
+          <input name="date" type="date" class="w-1/2 rounded border-gray-200 px-3 py-2" />
+          <select name="time" class="w-1/2 rounded border-gray-200 px-3 py-2"><option>09:00</option><option>11:00</option><option>14:00</option></select>
+        </div>
+        <div class="flex gap-2">
+          <button type="submit" class="bg-teal-600 text-white px-4 py-2 rounded">Request</button>
+          <button type="button" id="modal-close-2" class="px-4 py-2 rounded border">Cancel</button>
+        </div>
+        <p id="modal-status" class="text-sm text-gray-600 hidden"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Inline JS (jQuery) -->
+  <script>
+    $(function(){
+      // Accessibility & year
+      $('#year').text(new Date().getFullYear());
+
+      // Demo data (projects & testimonials) — replace with dynamic server data in production
+      const projects = [
+        {title:'E‑Commerce API', desc:'High-throughput order API with Stripe & Webhook handling', tech:['PHP','MySQL','Redis'], img:'/assets/project-ecom.jpg'},
+        {title:'SaaS Billing Backend', desc:'Subscription billing, invoices & usage metering', tech:['Laravel','MySQL','Queues'], img:'/assets/project-billing.jpg'},
+        {title:'Legacy App Migration', desc:'Refactored monolith to service-oriented components', tech:['PHP','Docker','Nginx'], img:'/assets/project-migrate.jpg'}
+      ];
+
+      const testimonials = [
+        {name:'Alice R.', role:'CTO, Fintech', text:'Delivered a rock-solid API and improved our response time by 5x.'},
+        {name:'Mark T.', role:'Founder, Shoply', text:'Handled complex payments and scaling while staying on budget.'},
+        {name:'Sara L.', role:'Product Manager', text:'Great communication, excellent test coverage, and fast delivery.'}
+      ];
+
+      // Render projects
+      const $projects = $('#projects');
+      projects.forEach((p,i)=>{
+        const $card = $(
+          `<div class="flex gap-3 items-start">
+            <img src="${p.img}" alt="${p.title}" loading="lazy" class="w-16 h-12 object-cover rounded" />
+            <div>
+              <h4 class="font-semibold">${p.title}</h4>
+              <p class="text-sm text-gray-600">${p.desc}</p>
+              <div class="text-xs text-gray-500 mt-1">${p.tech.join(' • ')}</div>
+            </div>
+          </div>`
+        );
+        $projects.append($card);
+      });
+
+      // Testimonials carousel
+      let tIndex = 0;
+      function renderTestimonial(i){
+        const t = testimonials[i];
+        $('#testimonial-area').html(`<blockquote class=\"text-gray-800\"><p class=\"text-lg font-medium\">\"${t.text}\"</p><footer class=\"mt-3 text-sm text-gray-600\">— ${t.name}, <span class=\"italic\">${t.role}</span></footer></blockquote>`);
+        // dots
+        const dots = testimonials.map((_,j)=>`<span class=\"testimonial-dot\" data-i=\"${j}\" style=\"background:${j===i?'#0ea5a4':'#d1d5db'}\"></span>").join('');
+        $('#testimonial-dots').html(dots);
+      }
+      renderTestimonial(0); 
+
+      // Auto rotate
+      let tTimer = setInterval(()=>{ tIndex = (tIndex+1)%testimonials.length; renderTestimonial(tIndex); }, 6000);
+
+      // dots click
+      $('#testimonial-dots').on('click','.testimonial-dot', function(){ clearInterval(tTimer); tIndex = +$(this).data('i'); renderTestimonial(tIndex); tTimer = setInterval(()=>{ tIndex = (tIndex+1)%testimonials.length; renderTestimonial(tIndex); }, 6000); });
+
+      // Lead form (demo: store to localStorage and show message)
+      $('#lead-form').on('submit', function(e){ e.preventDefault(); const data = $(this).serializeArray(); localStorage.setItem('php_lead', JSON.stringify(data)); $('#lead-status').text('Thanks — your message was saved locally (demo).').removeClass('hidden'); setTimeout(()=>$('#lead-status').fadeOut(),4000); $(this)[0].reset(); });
+
+      // Email capture
+      $('#email-capture').on('submit', function(e){ e.preventDefault(); const email = $(this).find('[name=email]').val(); if(!email) return; $('#email-status').text('Thanks — email captured (demo)').removeClass('hidden'); setTimeout(()=>$('#email-status').fadeOut(),3000); $(this)[0].reset(); });
+
+      // Scheduler
+      $('#book-meeting').on('click', function(){ const date = $('#meet-date').val(); const time = $('#meet-time').val(); if(!date){ $('#meeting-status').text('Please choose a date.').removeClass('hidden'); return; } const booking = {date,time}; localStorage.setItem('php_meeting', JSON.stringify(booking)); $('#meeting-status').text('Meeting requested — check your email for confirmation (demo).').removeClass('hidden'); setTimeout(()=>$('#meeting-status').fadeOut(),4000); });
+
+      // Modal open/close
+      $('#open-schedule,#schedule-small,#open-scheduler-cta').on('click', function(){ $('#schedule-modal').addClass('flex').removeClass('hidden'); });
+      $('#close-schedule,#modal-close-2').on('click', function(){ $('#schedule-modal').removeClass('flex').addClass('hidden'); $('#modal-status').addClass('hidden'); });
+      $('#modal-schedule-form').on('submit', function(e){ e.preventDefault(); const data = $(this).serializeArray(); localStorage.setItem('php_modal_booking', JSON.stringify(data)); $('#modal-status').text('Request sent (demo).').removeClass('hidden'); setTimeout(()=>{ $('#schedule-modal').removeClass('flex').addClass('hidden'); },1200); });
+
+      // Show all projects button (demo behavior)
+      $('#show-all-projects').on('click', function(){ alert('Open portfolio page (demo).'); });
+
+      // SEO-friendly: generate microcopy of important keywords for crawlers (keeps content visible but not spammy)
+      // This small section adds hidden but indexable supplemental text (use cautiously — don't stuff keywords in production)
+      $('body').append('<div style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">PHP developer, hire PHP developer, backend PHP, PHP APIs, Laravel developer, MySQL optimization, secure PHP development, PHP performance tuning</div>');
+
+    });
+  </script>
+
+</body>
+</html>

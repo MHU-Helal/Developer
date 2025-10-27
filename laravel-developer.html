@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Laravel Developer for Modern, Scalable Web Applications</title>
+  <meta name="description" content="Hire a professional Laravel developer for modern, scalable, and SEO-optimized web applications. Custom APIs, eCommerce, admin panels, and performance-tuned backends." />
+  <link rel="canonical" href="https://example.com/services/laravel-developer" />
+
+  <meta property="og:title" content="Expert Laravel Developer — Web Apps, APIs & eCommerce" />
+  <meta property="og:description" content="Hire a professional Laravel developer for scalable web apps, clean APIs, eCommerce, admin dashboards, and performance-tuned backends." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/laravel-dev-og.jpg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <style>
+    .hero-gradient { background: linear-gradient(135deg,#1e293b 0%, #e11d48 100%); }
+    .card-glow { box-shadow: 0 10px 30px rgba(225,29,72,0.08); }
+  </style>
+</head>
+<body class="antialiased text-gray-800 bg-gray-50">
+
+  <!-- Header / Hero -->
+  <header class="hero-gradient text-white py-16 sm:py-24">
+    <div class="container mx-auto px-6 lg:flex lg:items-center lg:justify-between">
+      <div class="lg:w-7/12">
+        <p class="uppercase tracking-wide text-sm opacity-90">Professional Services • Laravel Development</p>
+        <h1 class="mt-4 text-4xl font-extrabold leading-tight">Build Scalable Laravel Applications with Clean Architecture & Robust APIs</h1>
+        <p class="mt-4 text-lg opacity-95 max-w-2xl">From RESTful APIs to admin dashboards and SaaS products — get end-to-end Laravel development focused on performance, scalability, and maintainability.</p>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="mailto:yourname@gmail.com" class="inline-block bg-white text-rose-600 font-semibold px-5 py-3 rounded-lg shadow hover:shadow-lg">Email Me</a>
+          <a href="https://calendly.com/yourname/meeting" target="_blank" class="inline-block border border-white px-5 py-3 rounded-lg hover:bg-white/10">Schedule on Calendly</a>
+        </div>
+
+        <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm opacity-95">
+          <li>✅ Laravel 10+ Expertise</li>
+          <li>✅ REST & GraphQL APIs</li>
+          <li>✅ eCommerce & Subscriptions</li>
+          <li>✅ Clean, tested architecture</li>
+        </ul>
+      </div>
+
+      <div class="mt-10 lg:mt-0 lg:w-5/12">
+        <div class="bg-white rounded-2xl p-6 shadow-xl card-glow text-gray-800">
+          <h3 class="text-xl font-semibold">Quick Inquiry</h3>
+          <form id="contact-form" class="space-y-3 mt-3">
+            <input name="name" placeholder="Your Name" class="w-full rounded-md border-gray-200 px-3 py-2" required />
+            <input name="email" type="email" placeholder="your@email.com" class="w-full rounded-md border-gray-200 px-3 py-2" required />
+            <textarea name="message" rows="3" placeholder="Briefly describe your project" class="w-full rounded-md border-gray-200 px-3 py-2"></textarea>
+            <button type="submit" class="bg-rose-600 text-white px-4 py-2 rounded-md">Send Email</button>
+            <p id="form-status" class="text-sm text-gray-600 hidden"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-6 -mt-10">
+
+    <section class="bg-white rounded-2xl shadow p-6 md:p-8 -mt-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex gap-6">
+          <div class="text-center">
+            <p class="text-2xl font-bold">8+</p>
+            <p class="text-sm text-gray-500">Years experience</p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl font-bold">120+</p>
+            <p class="text-sm text-gray-500">Laravel projects</p>
+          </div>
+        </div>
+        <div class="text-sm text-gray-600">Available remotely. Timezone flexible. Focused on long-term Laravel partnerships.</div>
+      </div>
+    </section>
+
+    <section class="mt-8 grid lg:grid-cols-3 gap-6">
+      <article class="col-span-2 bg-white rounded-xl p-6 shadow">
+        <h2 class="text-2xl font-bold">Laravel Development Services</h2>
+        <p class="mt-3 text-gray-700">Expert Laravel developer offering scalable API-driven web apps, eCommerce, and enterprise solutions. Using queues, jobs, events, and modern package architecture for reliability and performance.</p>
+        <div class="mt-6 grid sm:grid-cols-2 gap-4">
+          <div class="p-4 border rounded"><h3 class="font-semibold">Full-Stack Laravel</h3><p class="text-sm text-gray-600 mt-1">Blade + Vue/React integrations for interactive dashboards.</p></div>
+          <div class="p-4 border rounded"><h3 class="font-semibold">API Development</h3><p class="text-sm text-gray-600 mt-1">Secure REST & GraphQL APIs with Sanctum or Passport.</p></div>
+          <div class="p-4 border rounded"><h3 class="font-semibold">Performance</h3><p class="text-sm text-gray-600 mt-1">Queue jobs, Horizon, Redis caching, and optimization tools.</p></div>
+          <div class="p-4 border rounded"><h3 class="font-semibold">Maintenance</h3><p class="text-sm text-gray-600 mt-1">Version upgrades, bug fixes, and production monitoring.</p></div>
+        </div>
+      </article>
+
+      <aside class="bg-white rounded-xl p-6 shadow">
+        <h3 class="font-bold">Recent Projects</h3>
+        <ul id="project-list" class="mt-4 space-y-3"></ul>
+        <a href="mailto:yourname@gmail.com" class="block mt-4 w-full bg-rose-600 text-white text-center py-2 rounded">Contact for Portfolio</a>
+      </aside>
+    </section>
+
+    <section class="mt-8 bg-white rounded-xl p-6 shadow">
+      <h2 class="text-2xl font-bold">Client Testimonials</h2>
+      <div id="testimonial" class="mt-4 text-gray-700"></div>
+    </section>
+
+    <section id="contact" class="mt-8 bg-gradient-to-r from-white to-rose-50 rounded-xl p-6 shadow">
+      <h2 class="text-2xl font-bold">Get In Touch</h2>
+      <p class="mt-2 text-gray-600">Email directly at <a href="mailto:yourname@gmail.com" class="text-rose-600 underline">yourname@gmail.com</a> or schedule a meeting via <a href="https://calendly.com/yourname/meeting" target="_blank" class="underline text-rose-600">Calendly</a>.</p>
+    </section>
+
+    <footer class="mt-8 py-8 text-sm text-gray-600 text-center">© <span id="year"></span> Laravel Developer • All rights reserved.</footer>
+  </main>
+
+  <script>
+    $(function(){
+      $('#year').text(new Date().getFullYear());
+      const projects = [
+        {name:'E-Commerce Platform', desc:'Laravel + Vue storefront with Stripe integration'},
+        {name:'SaaS Billing System', desc:'Subscription billing and user analytics dashboard'},
+        {name:'Enterprise CMS', desc:'Modular Laravel CMS with role-based access control'}
+      ];
+      projects.forEach(p => $('#project-list').append(`<li><strong>${p.name}</strong><br><span class='text-sm text-gray-600'>${p.desc}</span></li>`));
+
+      const testimonials = [
+        '“Delivered our Laravel upgrade flawlessly and improved speed by 3x.” — CTO, FinPro',
+        '“Reliable and highly skilled developer, great communication.” — CEO, EduTech',
+        '“Built our SaaS MVP within 6 weeks with Laravel & Vue.” — Founder, SaaSy'
+      ];
+      let idx = 0;
+      const showTestimonial = () => $('#testimonial').fadeOut(300, ()=>{$('#testimonial').text(testimonials[idx]).fadeIn(300);});
+      showTestimonial();
+      setInterval(()=>{idx=(idx+1)%testimonials.length;showTestimonial();},5000);
+
+      $('#contact-form').on('submit', function(e){
+        e.preventDefault();
+        const mail = 'mailto:yourname@gmail.com?subject=Laravel Project Inquiry&body=' + encodeURIComponent($(this).find('[name=message]').val());
+        window.location.href = mail;
+      });
+    });
+  </script>
+
+</body>
+</html>
