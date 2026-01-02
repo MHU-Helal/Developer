@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Banner Preview</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 6px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.label {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Thumbnail wrapper */
+.thumb {
+  width: 100%;
+  background: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Iframe scaling */
+.thumb iframe {
+  border: 0;
+  transform-origin: top left;
+}
+
+/* Scale rules per banner type */
+.scale-wide iframe   { transform: scale(0.2); }
+.scale-medium iframe { transform: scale(0.35); }
+.scale-square iframe { transform: scale(0.6); }
+.scale-vertical iframe { transform: scale(0.3); }
+
+/* Heights adjusted for scaled frames */
+.scale-wide   { height: 120px; }
+.scale-medium { height: 180px; }
+.scale-square { height: 220px; }
+.scale-vertical { height: 320px; }
+
+.open {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.open a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #0a66ff;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Google Ad Banner Preview</h1>
+
+<div class="grid">
+
+  <!-- 1280x100 -->
+  <div class="card">
+    <div class="label">1280 × 100</div>
+    <div class="thumb scale-wide">
+      <iframe src="banner_1280x100.html" width="1280" height="100"></iframe>
+    </div>
+    <div class="open"><a href="banner_1280x100.html" target="_blank">Open</a></div>
+  </div>
+
+  <!-- 1040x100 -->
+  <div class="card">
+    <div class="label">1040 × 100</div>
+    <div class="thumb scale-wide">
+      <iframe src="banner_1040x100.html" width="1040" height="100"></iframe>
+    </div>
+    <div class="open"><a href="banner_1040x100.html" target="_blank">Open</a></div>
+  </div>
+
+  <!-- 1280x300 -->
+  <div class="card">
+    <div class="label">1280 × 300</div>
+    <div class="thumb scale-medium">
+      <iframe src="banner_1280x300.html" width="1280" height="300"></iframe>
+    </div>
+    <div class="open"><a href="banner_1280x300.html" target="_blank">Open</a></div>
+  </div>
+
+  <!-- 240x620 -->
+  <div class="card">
+    <div class="label">240 × 620</div>
+    <div class="thumb scale-vertical">
+      <iframe src="banner_240x620.html" width="240" height="620"></iframe>
+    </div>
+    <div class="open"><a href="banner_240x620.html" target="_blank">Open</a></div>
+  </div>
+
+  <!-- 300x100 -->
+  <div class="card">
+    <div class="label">300 × 100</div>
+    <div class="thumb scale-medium">
+      <iframe src="banner_300x100.html" width="300" height="100"></iframe>
+    </div>
+    <div class="open"><a href="banner_300x100.html" target="_blank">Open</a></div>
+  </div>
+
+  <!-- 660x100 -->
+  <div class="card">
+    <div class="label">660 × 100</div>
+    <div class="thumb scale-medium">
+      <iframe src="banner_660x100.html" width="660" height="100"></iframe>
+    </div>
+    <div class="open"><a href="banner_660x100.html" target="_blank">Open</a></div>
+  </div>
+
+  <!-- 768x100 -->
+  <div class="card">
+    <div class="label">768 × 100</div>
+    <div class="thumb scale-medium">
+      <iframe src="banner_768x100.html" width="768" height="100"></iframe>
+    </div>
+    <div class="open"><a href="banner_768x100.html" target="_blank">Open</a></div>
+  </div>
+
+  <!-- 1024x100 -->
+  <div class="card">
+    <div class="label">1024 × 100</div>
+    <div class="thumb scale-medium">
+      <iframe src="banner_1024x100.html" width="1024" height="100"></iframe>
+    </div>
+    <div class="open"><a href="banner_1024x100.html" target="_blank">Open</a></div>
+  </div>
+
+  <!-- 300x250 -->
+  <div class="card">
+    <div class="label">300 × 250</div>
+    <div class="thumb scale-square">
+      <iframe src="banner_300x250.html" width="300" height="250"></iframe>
+    </div>
+    <div class="open"><a href="banner_300x250.html" target="_blank">Open</a></div>
+  </div>
+
+  <!-- 300x300 -->
+  <div class="card">
+    <div class="label">300 × 300</div>
+    <div class="thumb scale-square">
+      <iframe src="banner_300x300.html" width="300" height="300"></iframe>
+    </div>
+    <div class="open"><a href="banner_300x300.html" target="_blank">Open</a></div>
+  </div>
+
+</div>
+
+</body>
+</html>

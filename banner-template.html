@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{width}}x{{height}} Ad</title>
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.ad {
+  width: {{width}}px;
+  height: {{height}}px;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  background: {{bgColor}};
+  color: {{textColor}};
+  font-family: Arial, sans-serif;
+  border: 1px solid #e0e0e0;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+/* ===== IMAGE (LEFT) ===== */
+.ad .image {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f7f7;
+}
+
+.ad .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== TEXT (RIGHT) ===== */
+.ad .content {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ad h1 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.ad h2 {
+  margin: 4px 0;
+  color: #555;
+}
+
+.ad p {
+  margin: 4px 0;
+  line-height: 1.3;
+  color: #666;
+}
+
+.cta {
+  margin-top: 6px;
+  align-self: flex-start;
+  padding: 6px 12px;
+  background: {{ctaColor}};
+  color: {{ctaTextColor}};
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* ============================= */
+/* ===== SIZE-SPECIFIC RULES ==== */
+/* ============================= */
+
+/* --- Horizontal banners --- */
+.ad.horizontal .image { width: 30%; }
+.ad.horizontal h1 { font-size: 18px; }
+.ad.horizontal h2 { font-size: 14px; }
+.ad.horizontal p  { font-size: 12px; }
+
+/* --- Small mobile banner --- */
+.ad.mobile .image { width: 35%; }
+.ad.mobile h1 { font-size: 14px; }
+.ad.mobile p  { font-size: 11px; }
+
+/* --- Square banners --- */
+.ad.square {
+  flex-direction: column;
+}
+.ad.square .image {
+  width: 100%;
+  height: 55%;
+}
+.ad.square .content {
+  height: 45%;
+}
+.ad.square h1 { font-size: 16px; }
+.ad.square p  { font-size: 12px; }
+
+/* --- Vertical banners --- */
+.ad.vertical {
+  flex-direction: column;
+}
+.ad.vertical .image {
+  height: 60%;
+}
+.ad.vertical .content {
+  height: 40%;
+}
+.ad.vertical h1 { font-size: 18px; }
+.ad.vertical p  { font-size: 13px; }
+
+/* ============================= */
+/* ===== RESPONSIVE FALLBACK ==== */
+/* ============================= */
+@media (max-width: {{width}}px) {
+  .ad {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<a href="{{clickUrl}}" target="_blank"
+   class="ad {{layoutClass}}">
+
+  <div class="image">
+    <img src="{{image}}" alt="Ad image">
+  </div>
+
+  <div class="content">
+    <h1>{{title}}</h1>
+    <h2>{{subtitle}}</h2>
+    <p>{{description}}</p>
+    <span class="cta">{{cta}}</span>
+  </div>
+
+</a>
+
+</body>
+</html>
